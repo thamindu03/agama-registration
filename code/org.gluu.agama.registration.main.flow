@@ -56,5 +56,5 @@ Repeat 6 times max
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // User Registration flow failed
-it_syltw = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_syltw
+it_bvrte = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_bvrte
