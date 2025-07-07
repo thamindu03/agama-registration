@@ -36,29 +36,17 @@ Repeat 6 times max
                               inum | E = Call userRegistrationService addNewUser userInput
                               // If user registration success
                               When inum is not null
-                                   // Show user creation log
-                                   Log "@info User % has been created" inum
                                    // Show acknowledgement UI page for successful registration
                                    acknowledgementInput = RRF "acknowledgement.ftlh" 
                                    // Finish the flow successfully
-                                   Log "@info Finish the flow successfully"
-                                   // Finish the flow successfully
                                    Finish userName
-                              // Registration failed log
-                              Log "@info User registration failed. Error : %" E
                          Otherwise
-                              // User already registered with UID
-                              Log "@info User already registered with uid: %" userName
                               // User already registered with UID
                               uiFeedback.errorMessage = "User already registered with this UserName"
                     Otherwise
-                         // User already registered with mail
-                         Log "@info User already registered with mail: %" email
                          // User already Registered
                          uiFeedback.errorMessage = "User already Registered with this mail"
                Otherwise
-                    // Password and Confirm password doesn't match
-                    Log "@trace Password and Confirm password doesn't match"
                     // Error variable assignment
                     uiFeedback.errorMessage = "Password and confirm password not matching"
           Otherwise
@@ -67,8 +55,6 @@ Repeat 6 times max
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
-// Maximum attempt reached
-Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ejqjx = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ejqjx
+it_glcmd = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_glcmd
